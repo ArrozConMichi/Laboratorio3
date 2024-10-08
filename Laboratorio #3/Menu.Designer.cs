@@ -43,28 +43,31 @@
             this.problema3ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 31);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // problema1ToolStripMenuItem
             // 
+            this.problema1ToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.problema1ToolStripMenuItem.Name = "problema1ToolStripMenuItem";
-            this.problema1ToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.problema1ToolStripMenuItem.Size = new System.Drawing.Size(113, 27);
             this.problema1ToolStripMenuItem.Text = "Problema #1";
             this.problema1ToolStripMenuItem.Click += new System.EventHandler(this.problema1ToolStripMenuItem_Click);
             // 
             // problema2ToolStripMenuItem
             // 
+            this.problema2ToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.problema2ToolStripMenuItem.Name = "problema2ToolStripMenuItem";
-            this.problema2ToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.problema2ToolStripMenuItem.Size = new System.Drawing.Size(116, 27);
             this.problema2ToolStripMenuItem.Text = "Problema #2";
             this.problema2ToolStripMenuItem.Click += new System.EventHandler(this.problema2ToolStripMenuItem_Click);
             // 
             // problema3ToolStripMenuItem
             // 
+            this.problema3ToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.problema3ToolStripMenuItem.Name = "problema3ToolStripMenuItem";
-            this.problema3ToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.problema3ToolStripMenuItem.Size = new System.Drawing.Size(121, 27);
             this.problema3ToolStripMenuItem.Text = "Problema # 3";
             // 
             // Menu

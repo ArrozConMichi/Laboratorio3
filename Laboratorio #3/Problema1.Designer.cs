@@ -51,15 +51,18 @@
             this.dgvRetiro = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeposito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.btnAbrirCuenta);
             this.groupBox1.Controls.Add(this.txtMonInicial);
             this.groupBox1.Controls.Add(this.txtCliente);
@@ -119,6 +122,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.btnTransaccionar);
             this.groupBox2.Controls.Add(this.txtCantidad);
@@ -192,6 +196,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.btnNuevo);
             this.groupBox3.Controls.Add(this.txtSaldo);
             this.groupBox3.Controls.Add(this.label8);
@@ -291,15 +296,29 @@
             this.label5.Size = new System.Drawing.Size(0, 18);
             this.label5.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Laboratorio__3.Properties.Resources.FONDO;
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(792, 683);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // Problema1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 666);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(784, 688);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.MaximumSize = new System.Drawing.Size(800, 1000);
+            this.MinimumSize = new System.Drawing.Size(100, 0);
             this.Name = "Problema1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -312,6 +331,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeposito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,6 +361,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnTransaccionar;
         private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
