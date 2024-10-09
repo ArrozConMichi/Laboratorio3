@@ -32,7 +32,6 @@
             this.problema1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.problema2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.problema3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnIntegrantes = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,23 +71,11 @@
             this.problema3ToolStripMenuItem.Text = "Problema # 3";
             this.problema3ToolStripMenuItem.Click += new System.EventHandler(this.problema3ToolStripMenuItem_Click);
             // 
-            // btnIntegrantes
-            // 
-            this.btnIntegrantes.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.btnIntegrantes.Location = new System.Drawing.Point(329, 198);
-            this.btnIntegrantes.Name = "btnIntegrantes";
-            this.btnIntegrantes.Size = new System.Drawing.Size(104, 41);
-            this.btnIntegrantes.TabIndex = 3;
-            this.btnIntegrantes.Text = "Integrantes";
-            this.btnIntegrantes.UseVisualStyleBackColor = true;
-            this.btnIntegrantes.Click += new System.EventHandler(this.btnIntegrantes_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnIntegrantes);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -109,6 +96,5 @@
         private System.Windows.Forms.ToolStripMenuItem problema1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem problema2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem problema3ToolStripMenuItem;
-        private System.Windows.Forms.Button btnIntegrantes;
     }
 }

@@ -45,10 +45,5 @@ namespace Laboratorio__3
             problema3.WindowState = FormWindowState.Maximized;
             problema3.Show();
         }
-
-        private void btnIntegrantes_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("William Sanjur / Javier Valdes / Calvin Miró");
-        }
     }
 }

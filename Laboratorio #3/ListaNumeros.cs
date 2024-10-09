@@ -3,33 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-internal class ListaNumeros
-
+namespace Laboratorio__3
+{
+    internal class ListaNumeros
     {
+        private DataGridView _dataGridView;
 
-        private List<int> numeros;
-
-        public ListaNumeros()
+        public ListaNumeros(DataGridView dataGridView)
         {
-            numeros = new List<int>();
+            _dataGridView = dataGridView;
         }
 
 
-
-        public void AddNumber(int numero) => numeros.Add(numero);
-
-
-        public void RemoveOccurrences(int numero)
+        public void RemoverNumeros(int numberToRemove)
         {
-            numeros.RemoveAll(n => n == numero);
+            int totalRows = _dataGridView.RowCount;
+            int totalColumns = _dataGridView.ColumnCount;
+
+
+            List<string> remainingValues = new List<string>();
+
+
+            foreach (DataGridViewRow row in _dataGridView.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    string cellValue = cell.Value?.ToString();
+                    if (cellValue != null && cellValue != numberToRemove.ToString())
+                    {
+                        remainingValues.Add(cellValue);
+                    }
+                }
+            }
+
+
+            int currentIndex = 0;
+            for (int i = 0; i < totalRows; i++)
+            {
+                for (int j = 0; j < totalColumns; j++)
+                {
+                    _dataGridView[j, i].Value = currentIndex < remainingValues.Count ? remainingValues[currentIndex] : null;
+                    currentIndex++;
+                }
+            }
         }
-
-
-        public List<int> GetNumbers()
-        {
-            return numeros;
-        }
-
-
     }
+}

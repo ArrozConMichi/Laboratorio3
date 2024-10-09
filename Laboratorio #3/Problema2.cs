@@ -15,14 +15,17 @@ namespace Laboratorio__3
     public partial class Problema2 : Form
     {
 
-        private ListaNumeros listaNumeros;
+        private int currentCellIndex = 0;
 
         public Problema2()
         {
             InitializeComponent();
-            listaNumeros = new ListaNumeros();
-            dgvNumeros.RowCount = 5;
             dgvNumeros.ColumnCount = 5;
+            dgvNumeros.RowCount = 5;
+            dgvNumeros.AllowUserToAddRows = false;
+            dgvNumeros.AllowUserToDeleteRows = false;
+            dgvNumeros.AllowUserToResizeColumns = false;
+            dgvNumeros.AllowUserToResizeRows = false;
 
         }
 
@@ -38,28 +41,47 @@ namespace Laboratorio__3
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            string input = Interaction.InputBox("Ingresa un número para eliminar sus ocurrencias:", "Eliminar Ocurrencias", "", -1, -1);
+            ListaNumeros lista = new ListaNumeros(dgvNumeros);
+            string input = Interaction.InputBox("Ingrese el número que desea eliminar:", "Eliminar Número", "0");
 
-            if (int.TryParse(input, out int numero))
+            if (int.TryParse(input, out int numberToRemove))
             {
-
-                listaNumeros.RemoveOccurrences(numero);
-                ActualizarDgv();
+                lista.RemoverNumeros(numberToRemove);
             }
             else
             {
-                MessageBox.Show("Por favor, ingresa un número válido.");
+                MessageBox.Show("Por favor ingrese un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void ActualizarDgv()
+        private void button1_Click(object sender, EventArgs e)
         {
-            dgvNumeros.DataSource = null;
-            dgvNumeros.DataSource = new BindingSource { DataSource = listaNumeros.GetNumbers() };
+            if (currentCellIndex < 25)
+            {
 
+                string input = Interaction.InputBox("Ingrese un número para el siguiente espacio en el grid:", "Ingresar Número", "0");
+
+                if (int.TryParse(input, out int number))
+                {
+                    int rowIndex = currentCellIndex / 5;
+                    int colIndex = currentCellIndex % 5;
+
+                    if (rowIndex >= 0 && rowIndex < 5 && colIndex >= 0 && colIndex < 5)
+                    {
+                        dgvNumeros[colIndex, rowIndex].Value = number;
+                        currentCellIndex++;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingrese un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("El DataGridView ya está lleno.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
-
-
     }
 }
 
