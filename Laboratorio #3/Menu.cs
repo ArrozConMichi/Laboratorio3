@@ -37,5 +37,18 @@ namespace Laboratorio__3
         {
 
         }
+
+        private void problema3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Problema3 problema3 = new Problema3();
+            problema3.MdiParent = this;
+            problema3.WindowState = FormWindowState.Maximized;
+            problema3.Show();
+        }
+
+        private void btnIntegrantes_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("William Sanjur / Javier Valdes / Calvin Miró");
+        }
     }
 }
